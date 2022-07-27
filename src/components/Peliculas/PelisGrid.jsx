@@ -1,15 +1,20 @@
 import React from 'react'
 import Spinner from './Spinner'
-import Pelicula from './Pelicula'
+import Pelis from './Pelis'
 
-const PelisGrid = ({ items, isLoading}) => {
+const PelisGrid = ({ items, isLoading }) => {
   return (
-    isLoading ? (<Spinner />) : (<section className='cards'>
-        { items.map((item) => (
-            <Pelicula key={item.id} item={item.show}  />
-        ))}
-    </section>)
-  )
-}
+    isLoading ? (<Spinner />) : (<div className='container text-center mt-5 mb-5 bg-primary border border-white'>
+      <div className="row">
+        <div className="col">
+          {items.map((item) => (
+            <Pelis key={item.show.id} item={item.show} />
+          ))}
+
+        </div>
+        </div>
+        </div>
+    )
+)}
 
 export default PelisGrid
