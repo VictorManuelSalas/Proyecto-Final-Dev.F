@@ -1,6 +1,6 @@
 import React from 'react'
 import { BiMoviePlay } from 'react-icons/bi'
-import API from './API'
+import { NavLink } from 'react-router-dom'
 
 const Header = () => {
     return (
@@ -13,20 +13,26 @@ const Header = () => {
                 <div className="collapse navbar-collapse" id="navbarColor02">
                     <ul className="navbar-nav me-auto">
                         <li className="nav-item">
-                            <a className="nav-link active" href="#">Home
-                                <span className="visually-hidden">(current)</span>
-                            </a>
+                            <NavLink className='nav-link' to='/'>
+                                Home
+                            </NavLink>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="#">Features</a>
+                            <NavLink className='nav-link' to='/casilla'>
+                                Casilla
+                            </NavLink>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href='./API.jsx'>API</a>
+                            <NavLink className='nav-link' to='/api'>
+                                API
+                            </NavLink>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="#">About</a>
+                            <NavLink className='nav-link' to='/about'>
+                                About
+                            </NavLink>
                         </li>
-                        
+
                     </ul>
                 </div>
             </div>
