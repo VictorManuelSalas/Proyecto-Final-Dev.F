@@ -1,11 +1,11 @@
 import React from 'react'
 
-const Pelicula = ({ item, itemImg }) => {
+const Pelicula = ({ item }) => {
     return (
         <div className='card'>
             <div className='card-inner'>
                 <div className='card-front'>
-                    <img src={itemImg} alt={item.name} />
+                    <img src={ item.image } alt={item.name} />
                 </div>
                 <div className='card-back'>
                     <h1>{item.name}</h1>
