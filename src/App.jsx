@@ -13,7 +13,7 @@ function App() {
 
   useEffect(() => {
     const fetchItems = async () => {
-      const result = await axios(`https://api.tvmaze.com/search/shows?q=girls`)
+      const result = await axios(`https://api.tvmaze.com/search/shows?q=${query}`)
       console.log(result.data)
       setItems(result.data)
       setIsLoading(false)
@@ -26,7 +26,7 @@ function App() {
     <div>
       <Header />
       <FotoInicio />
-      <Buscador />
+      <Buscador getQuery={(q) => setQuery(q)} />
     </div>
   )
 }
