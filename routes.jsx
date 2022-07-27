@@ -1,3 +1,4 @@
+/*
 import { Routes, Route, Outlet, Navigate } from 'react-router-dom'
 import App from './components/App'
 import Header from './src/components/Header'
@@ -24,4 +25,4 @@ const Paths = () => {
     )
   }
   
-  export default Paths
+  export default Paths */

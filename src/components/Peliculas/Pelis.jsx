@@ -4,8 +4,8 @@ import SinFoto from './sinfoto.jpg'
 const Pelis = ({ item }) => {
 
     return (
-            <div className="card rounded-5 m-auto mb-3 shadow " style={{ width: '18rem' }}>
-                {item.image == null ? <img id='sinfoto' src={SinFoto}  alt={item.name} /> : <img id='sinfoto' src={item.image.medium} alt={item.name} />}
+            <div className="card rounded-5 m-auto mb-3  " style={{ width: '18rem' }}>
+                {item.image == null ? <img  src={SinFoto}  alt={item.name} /> : <img  src={item.image.medium} alt={item.name} />}
                 <div className="card-body">
                     <h5 className="card-title text-dark">{item.name}</h5>
                     <p className="card-text text-dark" >Some quick example text to build on the card title and make up the bulk of the card's content...</p>
