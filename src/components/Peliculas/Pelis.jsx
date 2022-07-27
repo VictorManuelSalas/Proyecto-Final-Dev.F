@@ -1,6 +1,5 @@
 import React from 'react'
 import SinFoto from './sinfoto.jpg'
-import PeliculaInfo from './PeliculaInfo'
 
 const Pelis = ({ item }) => {
 
@@ -11,7 +10,7 @@ const Pelis = ({ item }) => {
                     <h5 className="card-title text-dark">{item.name}</h5>
                     <p className="card-text text-dark" >Some quick example text to build on the card title and make up the bulk of the card's content...</p>
                     <p className="card-text text-dark"><small className=" text-dark">Duracion: {item.runtime == null ? 'No definido' : item.runtime + ' min'} </small></p>
-                    <a href={<PeliculaInfo />} className="btn btn-primary">Ver Mas</a>
+                    <a href='' className="btn btn-primary">Ver Mas</a>
                 </div>
             </div>
 
