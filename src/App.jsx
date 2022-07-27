@@ -5,6 +5,7 @@ import { useState, useEffect, useRef } from 'react'
 import FotoInicio from './components/FotoInicio'
 import Buscador from './components/Buscador'
 import Header from './components/Header'
+import PelisGrid from './components/Peliculas/PelisGrid'
 
 function App() {
   const [items, setItems] = useState([])
@@ -28,6 +29,7 @@ function App() {
       <Header />
       <FotoInicio />
       <Buscador getQuery={(q) => setQuery(q)} />
+      <PelisGrid isLoading={isLoading} items={items} />
     </div>
   )
 }
