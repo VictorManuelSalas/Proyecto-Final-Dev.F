@@ -1,5 +1,5 @@
 import axios from 'axios'
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 
 //Componentes
 import FotoInicio from './components/FotoInicio'
@@ -22,6 +22,7 @@ function App() {
     fetchItems()
   }, [query])
 
+  
   return (
     <div>
       <Header />
