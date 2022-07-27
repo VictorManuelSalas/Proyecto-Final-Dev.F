@@ -1,5 +1,6 @@
 import React from 'react'
 import { BiMoviePlay } from 'react-icons/bi'
+import API from './API'
 
 const Header = () => {
     return (
@@ -20,7 +21,7 @@ const Header = () => {
                             <a className="nav-link" href="#">Features</a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="#">Pricing</a>
+                            <a className="nav-link" href='./API.jsx'>API</a>
                         </li>
                         <li className="nav-item">
                             <a className="nav-link" href="#">About</a>

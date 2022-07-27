@@ -1,32 +1,21 @@
 import React from 'react'
 import SinFoto from './sinfoto.jpg'
 
-const Pelis = () => {
+const Pelis = ({ item, summary }) => {
+
     return (
-        <div className="card mb-3" style={{ maxWidth: 540 }}>
-            <div className="row g-0">
-                <div className="col-md-4">
-                    {item.image == null ? <img id='sinfoto' src={SinFoto} alt={item.name} /> : <img src={item.image.medium} alt={item.name} />}
-                </div>
-                <div className="col-md-8">
-                    <div className="card-body">
-                        <h5 className="card-title">{item.name}</h5>
-                        <p className="card-text">{item.summary}</p>
-                        <p className="card-text"><small className="text-muted">{item.runtime == null ? <p>No definido</p> : item.runtime} min</small></p>
-                        <div>
-                            <button type="button" className="btn btn-info">See More</button>
-                        </div>
+            <div className="card rounded-5 m-auto mb-3" style={{ width: '18rem' }}>
+                {item.image == null ? <img id='sinfoto' src={SinFoto} className='rounded-pill' alt={item.name} /> : <img className='rounded-pill' src={item.image.medium} alt={item.name} />}
+                <div className="card-body">
+                    <h5 className="card-title text-dark">{item.name}</h5>
+                    <p className="card-text text-dark" >Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <p className="card-text text-dark"><small className=" text-dark">Duracion: {item.runtime == null ? 'No definido' : item.runtime + ' min'} </small></p>
 
-                    </div>
+                    <a href="#" className="btn btn-primary">Go somewhere</a>
                 </div>
             </div>
-            <div className="alert alert-dismissible alert-info">
-                <button type="button" className="btn-close" data-bs-dismiss="alert" />
-                <strong>Heads up!</strong> This <a href="#" className="alert-link">alert needs your attention</a>, but it's not super important.
-            </div>
 
-        </div>
-
+          
 
         /*
                <div className='card m-5 p-3'>
